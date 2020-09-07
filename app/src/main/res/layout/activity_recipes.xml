@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recipes">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:background="@drawable/recipesback"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="58dp"
+            android:layout_marginTop="239dp">
+
+        </RelativeLayout>
+
+        <SearchView
+            android:layout_width="225dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="103dp"
+            android:layout_marginEnd="49dp"
+            android:background="@drawable/searchbarstyle"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/waterView2"
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="35dp"
+
+
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="160dp"
+            android:text="Find a Recipe"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/thin" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/waterView4"
+                android:layout_width="211dp"
+                android:layout_height="47dp"
+
+
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="24dp"
+                android:text="Browse Breakfast"
+                android:textColor="#EB1717"
+                android:textSize="24sp"
+                app:fontFamily="@font/medium" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="320dp"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="#00FFFFFF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/breakfastLayout"
+                            android:layout_width="201dp"
+                            android:layout_height="256dp"
+                            android:background="@drawable/recipesboxstyle">
+
+                            <ImageView
+                                android:id="@+id/breakfastView"
+                                android:layout_width="199dp"
+                                android:layout_height="136dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="0dp"
+                                android:background="@drawable/imgboxhelp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:srcCompat="@drawable/breakfast2"
+                                app:tintMode="src_in" />
+
+                            <TextView
+                                android:id="@+id/breakfastText"
+                                android:layout_width="190dp"
+                                android:layout_height="64dp"
+
+
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="141dp"
+                                android:layout_marginEnd="6dp"
+                                android:text="Vanilla Strawberry Yogurt"
+                                android:textColor="#C53333"
+                                android:textSize="24sp"
+                                app:fontFamily="@font/light" />
+
+                            <TextView
+                                android:id="@+id/breakfastcText"
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+
+
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="83dp"
+                                android:layout_marginTop="224dp"
+                                android:layout_marginEnd="-21dp"
+                                android:text="100 calories"
+                                android:textColor="#5C5B5B"
+                                android:textSize="20sp"
+                                app:fontFamily="@font/light" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF" />
+
+                    <RelativeLayout
+                        android:id="@+id/breakfastLayout2"
+                        android:layout_width="201dp"
+                        android:layout_height="256dp"
+                        android:background="@drawable/recipesboxstyle">
+
+                        <ImageView
+                            android:id="@+id/breakfast2View"
+                            android:layout_width="199dp"
+                            android:layout_height="136dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginTop="0dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/breakfast3"
+                            app:tintMode="src_in" />
+
+                        <TextView
+                            android:id="@+id/breakfast2Text"
+                            android:layout_width="190dp"
+                            android:layout_height="64dp"
+
+
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="141dp"
+                            android:layout_marginEnd="6dp"
+                            android:text="Blueberry Waffle"
+                            android:textColor="#C53333"
+                            android:textSize="24sp"
+                            app:fontFamily="@font/light" />
+
+                        <TextView
+                            android:id="@+id/breakfast2cText"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+
+
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="83dp"
+                            android:layout_marginTop="224dp"
+                            android:layout_marginEnd="-21dp"
+                            android:text="320 calories"
+                            android:textColor="#5C5B5B"
+                            android:textSize="20sp"
+                            app:fontFamily="@font/light" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/breakfastLayout3"
+                            android:layout_width="201dp"
+                            android:layout_height="256dp"
+                            android:background="@drawable/recipesboxstyle">
+
+                            <ImageView
+                                android:id="@+id/breakfast3View"
+                                android:layout_width="199dp"
+                                android:layout_height="136dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="0dp"
+                                android:background="@drawable/imgboxhelp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:srcCompat="@drawable/breakfast4"
+                                app:tintMode="src_in" />
+
+                            <TextView
+                                android:id="@+id/breakfast3Text"
+                                android:layout_width="190dp"
+                                android:layout_height="64dp"
+
+
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="141dp"
+                                android:layout_marginEnd="6dp"
+                                android:text="Spinach Egg Poure"
+                                android:textColor="#C53333"
+                                android:textSize="24sp"
+                                app:fontFamily="@font/light" />
+
+                            <TextView
+                                android:id="@+id/breakfastc3Text"
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+
+
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="83dp"
+                                android:layout_marginTop="224dp"
+                                android:layout_marginEnd="-21dp"
+                                android:text="452 calories"
+                                android:textColor="#5C5B5B"
+                                android:textSize="20sp"
+                                app:fontFamily="@font/light" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider4"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/waterView10"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+
+
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="24dp"
+                android:text="Browse Snacks"
+                android:textColor="#EB1717"
+                android:textSize="24sp"
+                app:fontFamily="@font/medium" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="320dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="15dp"
+                        android:layout_height="match_parent"
+                        android:background="#00FFFFFF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/breakfastLayout"
+                            android:layout_width="201dp"
+                            android:layout_height="256dp"
+                            android:background="@drawable/recipesboxstyle">
+
+                            <ImageView
+                                android:id="@+id/breakfastView"
+                                android:layout_width="199dp"
+                                android:layout_height="136dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="0dp"
+                                android:background="@drawable/imgboxhelp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:srcCompat="@drawable/breakfast2"
+                                app:tintMode="src_in" />
+
+                            <TextView
+                                android:id="@+id/breakfastText"
+                                android:layout_width="190dp"
+                                android:layout_height="64dp"
+
+
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="141dp"
+                                android:layout_marginEnd="6dp"
+                                android:text="Vanilla Strawberry Yogurt"
+                                android:textColor="#C53333"
+                                android:textSize="24sp"
+                                app:fontFamily="@font/light" />
+
+                            <TextView
+                                android:id="@+id/breakfastcText"
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+
+
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="83dp"
+                                android:layout_marginTop="224dp"
+                                android:layout_marginEnd="-21dp"
+                                android:text="100 calories"
+                                android:textColor="#5C5B5B"
+                                android:textSize="20sp"
+                                app:fontFamily="@font/light" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF" />
+
+                    <RelativeLayout
+                        android:id="@+id/breakfastLayout2"
+                        android:layout_width="201dp"
+                        android:layout_height="256dp"
+                        android:background="@drawable/recipesboxstyle">
+
+                        <ImageView
+                            android:id="@+id/breakfast2View"
+                            android:layout_width="199dp"
+                            android:layout_height="136dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginTop="0dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/breakfast3"
+                            app:tintMode="src_in" />
+
+                        <TextView
+                            android:id="@+id/breakfast2Text"
+                            android:layout_width="190dp"
+                            android:layout_height="64dp"
+
+
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="141dp"
+                            android:layout_marginEnd="6dp"
+                            android:text="Blueberry Waffle"
+                            android:textColor="#C53333"
+                            android:textSize="24sp"
+                            app:fontFamily="@font/light" />
+
+                        <TextView
+                            android:id="@+id/breakfast2cText"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+
+
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="83dp"
+                            android:layout_marginTop="224dp"
+                            android:layout_marginEnd="-21dp"
+                            android:text="320 calories"
+                            android:textColor="#5C5B5B"
+                            android:textSize="20sp"
+                            app:fontFamily="@font/light" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/breakfastLayout3"
+                            android:layout_width="201dp"
+                            android:layout_height="256dp"
+                            android:background="@drawable/recipesboxstyle">
+
+                            <ImageView
+                                android:id="@+id/breakfast3View"
+                                android:layout_width="199dp"
+                                android:layout_height="136dp"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginStart="1dp"
+                                android:layout_marginTop="0dp"
+                                android:background="@drawable/imgboxhelp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:srcCompat="@drawable/breakfast4"
+                                app:tintMode="src_in" />
+
+                            <TextView
+                                android:id="@+id/breakfast3Text"
+                                android:layout_width="190dp"
+                                android:layout_height="64dp"
+
+
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="141dp"
+                                android:layout_marginEnd="6dp"
+                                android:text="Spinach Egg Poure"
+                                android:textColor="#C53333"
+                                android:textSize="24sp"
+                                app:fontFamily="@font/light" />
+
+                            <TextView
+                                android:id="@+id/breakfastc3Text"
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+
+
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="83dp"
+                                android:layout_marginTop="224dp"
+                                android:layout_marginEnd="-21dp"
+                                android:text="452 calories"
+                                android:textColor="#5C5B5B"
+                                android:textSize="20sp"
+                                app:fontFamily="@font/light" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider4"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00FFFFFF" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

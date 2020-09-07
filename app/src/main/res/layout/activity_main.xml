@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image4"
+    tools:context=".MainActivity"
+
+
+    >
+
+    <TextView
+        android:layout_width="35dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="604dp"
+        android:text="my"
+        android:textColor="@color/turquoise"
+        android:fontFamily="@font/medium"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432" />
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="604dp"
+        android:fontFamily="@font/medium"
+        android:text="Diet"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.554"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.432" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.108" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="156dp"
+        android:layout_height="38dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.781"
+        android:background="@drawable/custom_button"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="156dp"
+        android:layout_height="38dp"
+        android:background="@drawable/custom_button"
+        android:text="Sign Up"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.878" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="350dp"
+        android:layout_height="182dp"
+        android:layout_marginHorizontal="22dp"
+        android:fontFamily="@font/medium"
+        android:text="Become "
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.372" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="350dp"
+        android:layout_height="180dp"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginVertical="189dp"
+        android:fontFamily="@font/medium"
+        android:text="Healthier today!"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.372" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="292dp"
+        android:layout_height="180dp"
+        android:layout_marginHorizontal="22dp"
+        android:layout_marginVertical="450dp"
+        android:fontFamily="@font/medium"
+        android:text="Don't waste your time and find
+the best diet plan now"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.372" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
