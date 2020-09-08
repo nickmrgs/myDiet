@@ -17,6 +17,7 @@
         <activity android:name=".MainMenu" />
         <activity android:name=".Register" />
         <activity android:name=".Login" />
+        <activity android:name=".Swipe"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
