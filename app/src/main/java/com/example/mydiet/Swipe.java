@@ -66,6 +66,8 @@ public class Swipe extends AppCompatActivity {
                 }
             }
 
+
+
             @Override
             public void onPageSelected(int position) {
 
@@ -76,6 +78,7 @@ public class Swipe extends AppCompatActivity {
 
             }
         });
+
 
 
     }
