@@ -18,6 +18,7 @@ public class MainMenu extends AppCompatActivity {
     LinearLayout dietplan;
     LinearLayout recipes;
     LinearLayout prol;
+    LinearLayout mystats;
 
 
     @Override
@@ -29,6 +30,7 @@ public class MainMenu extends AppCompatActivity {
         prol=(LinearLayout)findViewById(R.id.pro);
         recipes=(LinearLayout)findViewById(R.id.linearLayoutrecipes);
         dietplan=(LinearLayout)findViewById(R.id.linearLayoutdietplan);
+        mystats=(LinearLayout)findViewById(R.id.linearLayoutMystats);
 
 
         l1.setOnClickListener(new View.OnClickListener() {
@@ -67,6 +69,15 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
+        mystats.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openmystats();
+
+
+            }
+        });
+
 
 
 
@@ -91,9 +102,13 @@ public class MainMenu extends AppCompatActivity {
 
     void openPro()
     {
-      Intent intent = new Intent(this,PieChart.class);
+      Intent intent = new Intent(this,Swipe.class);
       startActivity(intent);
     }
 
-
+    void openmystats()
+    {
+        Intent intent = new Intent(this, PieChart.class);
+        startActivity(intent);
+    }
 }

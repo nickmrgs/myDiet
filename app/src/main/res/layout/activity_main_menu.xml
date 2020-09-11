@@ -182,11 +182,13 @@ tools:context=".MainMenu">
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:id="@+id/mystats"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
+                    android:id="@+id/linearLayoutMystats"
                     android:layout_height="120dp"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
