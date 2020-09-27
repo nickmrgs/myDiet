@@ -102,7 +102,7 @@ public class MainMenu extends AppCompatActivity {
 
     void openPro()
     {
-      Intent intent = new Intent(this,Swipe.class);
+      Intent intent = new Intent(this,weekly.class);
       startActivity(intent);
     }
 

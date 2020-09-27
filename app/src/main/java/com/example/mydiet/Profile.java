@@ -82,7 +82,10 @@ public class Profile extends AppCompatActivity implements profileDialog.profiled
            email =  res.getString(4);
 
 
+
+
         }
+
         tv1.setText(height);
         tv2.setText(weight);
         tv5.setText(age);
@@ -141,6 +144,24 @@ public class Profile extends AppCompatActivity implements profileDialog.profiled
                 Msg("Error Updating Weight Value");
             }
         }
+        ////update bmi
+        if(ht||wt)
+        {
+            String he = tv1.getText().toString();
+            String we = tv2.getText().toString();
+            double h =Double.parseDouble(he);
+            double w =Double.parseDouble(we);
+            double bmi = ((float)w/(h * h))*10000;
+            bmi = Math.round(bmi);
+            String bmis =String.valueOf(bmi);
+            boolean bmiInsert = mydb.updateBMI(bmis,tv0.getText().toString());
+            if(!bmiInsert)
+            {
+                Msg("Error Updating BMI Value");
+            }
+        }
+
+
         if(at)
         {
             tv5.setText(age);

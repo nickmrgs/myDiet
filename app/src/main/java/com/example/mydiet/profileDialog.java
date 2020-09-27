@@ -20,6 +20,7 @@ public class profileDialog extends AppCompatDialogFragment {
     private EditText targetText;
     private EditText ageText;
     private Button button1;
+    public boolean bmiwrite = false;
     public boolean heightwrite=true;
     public boolean weightwrite=true;
     public boolean agewrite=true;

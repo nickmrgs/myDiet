@@ -23,6 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String ICOL4 = "age";
     public static final String ICOL5 = "sex";
     public static final String ICOL6 = "country";
+    public static final String ICOL7 = "bmi";
 
 
     public static final String TABLE_NAME2 = "target";
@@ -44,7 +45,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(createTable);
 
         String createTable1 = "CREATE TABLE " + TABLE_NAME1 + "("
-                + ICOL1 + " TEXT PRIMARY KEY, " + ICOL2  + "  TEXT , " + " TEXT , " + ICOL3 + " TEXT , " + ICOL4 + " TEXT , " + ICOL5 + " TEXT , " + ICOL6 + " TEXT , "  + " FOREIGN KEY (" + ICOL1   + ") REFERENCES " + TABLE_NAME + "( " + COL2 + " ) );";
+                + ICOL1 + " TEXT PRIMARY KEY, " + ICOL2  + "  TEXT , " + " TEXT , " + ICOL3 + " TEXT , " + ICOL4 + " TEXT , " + ICOL5 + " TEXT , " + ICOL6 + " TEXT , " + ICOL7 + " TEXT , "  + " FOREIGN KEY (" + ICOL1   + ") REFERENCES " + TABLE_NAME + "( " + COL2 + " ) );";
         db.execSQL(createTable1);
 
         String createTable2 = "CREATE TABLE " + TABLE_NAME2 + "("
@@ -87,12 +88,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return res;
     }
 
+
+
     public Cursor getUserInformation(String useremail)
     {
 
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor res = db.rawQuery("select height,weight,age,country,email from info where email=?",new String[]{useremail});
+        Cursor res = db.rawQuery("select height,weight,age,country,email,bmi from info where email=?",new String[]{useremail});
         return res;
+    }
+    public Cursor getCalcInfo(String useremail)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select age,sex,bmi from info where email=?",new String[]{useremail});
+        return res;
+    }
+
+    public Cursor getCalcInfo2(String useremail)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select goal,activity from target where email=?",new String[]{useremail});
+        return res;
+
     }
 
     public Cursor getUserTarget(String useremail)
@@ -101,6 +118,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor res = db.rawQuery("select weight from target where email=?",new String[]{useremail});
         return res;
     }
+
 
     public boolean updateHeight(String height,String mail)
     {
@@ -120,6 +138,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(ICOL3, weight);
+        long result = db.update(TABLE_NAME1,cv,"email=?",new String[]{mail});
+        if (result == -1) {
+            return false;
+        } else {
+            return true;}
+
+    }
+
+    public boolean updateBMI(String bmi,String mail)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(ICOL7,bmi);
+        System.out.println("edw"+bmi);
         long result = db.update(TABLE_NAME1,cv,"email=?",new String[]{mail});
         if (result == -1) {
             return false;
@@ -154,6 +186,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+
     public boolean insertTarget(String email,String weight,String goal,String activity)
     {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -174,7 +207,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public boolean insertInfo(String email, String height, String weight, String age, String sex, String country) {
+
+    public boolean insertInfo(String email, String height, String weight, String age, String sex, String country,String bmi) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
         cv.put(ICOL1, email);
@@ -183,6 +217,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put(ICOL4, age);
         cv.put(ICOL5, sex);
         cv.put(ICOL6, country);
+        cv.put (ICOL7,bmi);
+
 
         long result = db.insert(TABLE_NAME1, null, cv);
         if (result == -1) {
@@ -192,5 +228,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         }
 
+
     }
+
 }

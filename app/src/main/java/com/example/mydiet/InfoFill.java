@@ -12,8 +12,12 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class InfoFill extends AppCompatActivity {
     public int weight;
+    public  int height;
+    public  double bmi;
     private Button button;
     private EditText heightBox;
     private EditText weightBox;
@@ -47,9 +51,12 @@ public class InfoFill extends AppCompatActivity {
 
                 if(heightBox.length() !=0 && weightBox.length() !=0 && ageBox.length() !=0)
                 {
-                  int height =  Integer.parseInt(heightBox.getText().toString());
+                  height =  Integer.parseInt(heightBox.getText().toString());
                   weight =  Integer.parseInt(weightBox.getText().toString());
-                  int age    =  Integer.parseInt(ageBox.getText().toString());
+                  int age  = Integer.parseInt(ageBox.getText().toString());
+                  bmi = ((float)weight/(height * height))*10000;
+                    bmi = Math.round(bmi);
+                  Msg(Double.toString(bmi));
                   if (height<100 || height > 250)
                   {
                       correctdata=false;
@@ -62,10 +69,9 @@ public class InfoFill extends AppCompatActivity {
                   {
                       correctdata=false;
                   }
-
                   if(correctdata)
                   {
-                      boolean isInserted = mydb.insertInfo(mail,heightBox.getText().toString(),weightBox.getText().toString(),ageBox.getText().toString(),spinner.getSelectedItem().toString(),spinner2.getSelectedItem().toString());
+                      boolean isInserted = mydb.insertInfo(mail,heightBox.getText().toString(),weightBox.getText().toString(),ageBox.getText().toString(),spinner.getSelectedItem().toString(),spinner2.getSelectedItem().toString(),Double.toString(bmi));
                       if(isInserted)
                       {
                           openFill2Activity();
@@ -143,5 +149,8 @@ public class InfoFill extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+
+
 
 }
